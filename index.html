@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- slick-carousel links -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <!-- bootstrap links -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- font-awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <i class="fa fa-chevron-up btn-to-top"></i>
+            <div class="header-main">
+                <div class="open-nav-menu">
+                    <span></span>
+                </div>
+                <div class="menu-overlay">
+                </div>
+                <!-- navigation menu start -->
+                <nav class="nav-menu">
+                    <div class="close-nav-menu">
+                        <img src="images/close.svg" alt="close">
+                    </div>
+                    <div class="flex-nav-menu">
+                        <ul class="menu menu1">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu">Payment Options<i class="fas fa-caret-down plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#">Options 1</a></li>
+                                    <li class="menu-item"><a href="#">Options 2</a></li>
+                                    <li class="menu-item"><a href="#">Options 3</a></li>
+                                    <li class="menu-item"><a href="#">Options 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">FaQ</a>
+                            </li>
+                        </ul>
+                        <ul class="menu menu2">
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu"><i class="fa fa-usd" aria-hidden="true"></i>Currency <i class="fas fa-caret-down plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#">page 1</a></li>
+                                    <li class="menu-item"><a href="#">page 2</a></li>
+                                    <li class="menu-item"><a href="#">page 3</a></li>
+                                    <li class="menu-item"><a href="#">page 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-has-children">
+                                <a href="#" data-toggle="sub-menu"><i class="fa fa-globe" aria-hidden="true"></i>Language <i class="fas fa-caret-down plus"></i></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="#">Anglais</a></li>
+                                    <li class="menu-item"><a href="#">French</a></li>
+                                    <li class="menu-item"><a href="#">Arabic</a></li>
+                                    <li class="menu-item"><a href="#">Italien</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation menu end -->
+            </div>
+        </div>
+    </header>
+    <div class="header-logo">
+        <div class="container">
+            <div class="content-header-logo">
+                <div class="logo">
+                    <img src="images/mawadlogo.svg" alt="logo">
+                </div>
+                <div class="inputs">
+                    <input type="text" placeholder="Search what you want">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <select name="All categories" id="All categories">
+                        <option value="All categories">All categories</option>
+                        <option value="volvo">categorie1</option>
+                        <option value="saab">categorie2</option>
+                        <option value="opel">categorie3</option>
+                        <option value="audi">categorie4</option>
+                    </select>
+                </div>
+                <div class="btn-submits">
+                    <input type="submit" value="Sign In">
+                    <input type="submit" value="Sign Up">
+                </div>
+                <div class="card-head">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <a href="#">Card<span class="btn" id="product-qtn">0</span></a>
+                    <div class="details-card">
+                        <h1>card</h1>
+                        <select name="Address Selector" id="Address Selector">
+                        <option value="Address Selector">Address Selector</option>
+                        <option value="Sfax">Sfax</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Mahdia">Mahdia</option>
+                    </select>
+                        <h4>Cart Item Details</h4>
+                        <div class="content-card-details">
+                            <div class="size">
+                                <span>Size</span>
+                                <span><strong>Big</strong></span>
+                                <span>Meduim</span>
+                            </div>
+                            <div class="color">
+                                <span>color</span>
+                                <span class="the-color"></span>
+                                <span></span>
+                            </div>
+                            <div class="quantity">
+                                <span>quantity</span>
+                                <span class="btn" onclick="inc()">+</span>
+                                <span><strong  id="product-qtn2">0</strong></span>
+                                <span class="btn" onclick="dec()">-</span>
+                            </div>
+                        </div>
+                        <h4 class="Shipping">Shipping Costs<span><strong id="product1price">0</strong></strong></span><span><strong>AED</strong></span></h4>
+                        <h4>Total Costs<span id="total">0</span><span><strong>AED</strong></span></h4>
+                        <input type="submit" value="Purchase">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="marketing">
+        <div class="container">
+            <div class="content-marketing">
+                <div class="slider-marketing">
+                    <section class="content-slider">
+                        <div class="slider">
+                            <div class="images">
+                                <input type="radio" name="slide" id="img1" checked>
+                                <input type="radio" name="slide" id="img2">
+                                <input type="radio" name="slide" id="img3">
+                                <input type="radio" name="slide" id="img4">
+
+                                <img src="./images/orient.png" class="m1" alt="orient">
+                                <img src="./images/orient.png" class="m2" alt="orient">
+                                <img src="./images/orient.png" class="m3" alt="orient">
+                                <img src="./images/orient.png" class="m4" alt="orient">
+                            </div>
+                            <div class="dots">
+                                <label for="img1"></label>
+                                <label for="img2"></label>
+                                <label for="img3"></label>
+                                <label for="img4"></label>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+                <div class="marketing-images">
+                    <div class="static-mark">
+                        <div class="img-static">
+                            <img src="images/chart.png" alt="chart">
+                        </div>
+                        <p>Last week Selling</p>
+                        <span>statistics</span>
+                    </div>
+                    <div class="best-offert">
+                        <h2>Best Offer</h2>
+                        <h4>CatchyLine</h4>
+                        <h1>%50 Off</h1>
+                        <div class="img-category"><img src="images/product-img-cat.png" alt="product"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section orient -->
+    <section class="orient-offer">
+        <div class="container">
+            <div class="content-offert">
+                <div class="offert">
+                    <h2>Offer</h2>
+                    <h3>CatchyLine</h3>
+                </div>
+                <div class="img-offert">
+                    <img src="images/orient2.png" alt="orient">
+                </div>
+                <h2>%50 Off</h2>
+            </div>
+        </div>
+    </section>
+    <!-- start section brands you need -->
+    <section class="spolit spolit-brands">
+        <div class="container">
+            <h2>Explore our categories</h2>
+            <div class="logo-slider3" id="logo-icon-cat">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 1</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 2</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 3</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 4</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 5</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 6</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="logo-slider3" id="logo-icon-cat">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 7</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 8</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 9</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 10</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 11</h3>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="images/icon-cat.png" alt="icon-cat"></div>
+                        <h3>Category 12</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start sectionn spolit -->
+    <section class="spolit">
+        <div class="container">
+            <h1>Spotlight</h1>
+            <div class="logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product1</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product2</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product3</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product4</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product5</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product6</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section categoryName -->
+    <section class="categoryName">
+        <div class="container">
+            <h2>Category Name</h2>
+            <h3>CatchyLine</h3>
+        </div>
+    </section>
+    <!-- start section spolit -->
+    <section class="spolit split-star">
+        <div class="container">
+            <div class="logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product1</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product2</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product3</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product4</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product5</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product6</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section categoryName -->
+    <section class="categoryName G-name Vert">
+        <div class="container">
+            <div class="img-category"><img src="images/product-img-cat.png" alt="product-img-cat"></div>
+            <div class="titles">
+                <h2>Category Name</h2>
+                <h3>CatchyLine</h3>
+            </div>
+        </div>
+    </section>
+    <!-- start section category -->
+    <section class="category">
+        <div class="container">
+            <div class="category1">
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/opc3.png" alt="opc3"></div>
+                </div>
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc.png" alt="acc"></div>
+                </div>
+            </div>
+            <div class="category1 catergory1-2">
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc3.png" alt="acc3"></div>
+                </div>
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc3.png" alt="acc3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section brands you need -->
+    <section class="spolit spolit-brands">
+        <div class="container">
+            <h2>Brands you need to know about</h2>
+            <div class="logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cemex.png" alt="cemex"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/sipes.png" alt="sipes"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/momtaz.png" alt="momtaz"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/elsewedy.png" alt="elsewedy"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/bosch.png" alt="bosch"></div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <img src="images/momtaz.png" alt="momtaz"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section categoryName -->
+    <section class="categoryName color-marron">
+        <div class="container">
+            <h2>Category Name</h2>
+            <h3>CatchyLine</h3>
+        </div>
+    </section>
+    <!-- start section spolit -->
+    <section class="spolit split-star">
+        <div class="container">
+            <div class="logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product1</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product2</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product3</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product4</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product5</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i></div><img src="images/main_product.png" alt="main_product"></div>
+                        <h2>product6</h2>
+                        <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section categoryName -->
+    <section class="categoryName G-name color-bleu">
+        <div class="container">
+            <div class="img-category"><img src="images/product-img-cat.png" alt="product-img-cat"></div>
+            <div class="titles">
+                <h2>Category Name</h2>
+                <h3>CatchyLine</h3>
+            </div>
+        </div>
+    </section>
+    <!-- start section category -->
+    <section class="category">
+        <div class="container">
+            <div class="category1">
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/opc3.png" alt="opc3"></div>
+                </div>
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc.png" alt="acc"></div>
+                </div>
+            </div>
+            <div class="category1 catergory1-2">
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc3.png" alt="acc3"></div>
+                </div>
+                <div class="category1-category">
+                    <h3>Category 1</h3>
+                    <p>Sed diam nonummy nibh euismod<br> tincidunt ut laoreet dolore.</p>
+                    <div class="imgcategory1-category"><img src="images/acc3.png" alt="acc3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section tffecto -->
+    <section class="content-slider">
+        <div class="slider">
+            <div class="images">
+                <input type="radio" name="slide" id="img1" checked>
+                <input type="radio" name="slide" id="img2">
+                <input type="radio" name="slide" id="img3">
+                <input type="radio" name="slide" id="img4">
+
+                <img src="./images/fecto.png" class="m1" alt="fecto">
+                <img src="./images/fecto.png" class="m2" alt="fecto">
+                <img src="./images/fecto.png" class="m3" alt="fecto">
+                <img src="./images/fecto.png" class="m4" alt="fecto">
+            </div>
+            <div class="dots">
+                <label for="img1"></label>
+                <label for="img2"></label>
+                <label for="img3"></label>
+                <label for="img4"></label>
+            </div>
+        </div>
+    </section>
+    <!-- start section buying guide -->
+    <!-- start section spolit -->
+    <section class="spolit split-star star-description">
+        <div class="container">
+            <h1>Buying Guide</h1>
+            <div class="logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img item-star">
+                            <div class="star-icon"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></div>
+                            <h2>Article Header</h2>
+                            <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section brands Additional you need -->
+    <section class="spolit spolit-brands addional">
+        <div class="container">
+            <h2>Additional Resources</h2>
+            <div class="logo-slider2 logo-slider" id="logo-slider">
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <div class="item-img"><img src="images/cat.png" alt="cat"></div>
+                        <h4>Resource Header</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- start section newsletter -->
+    <section class="newsletter">
+        <div class="container">
+
+            <div class="formulaire-newsletter">
+                <h2>Subscribe</h2>
+                <p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim a minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
+                <div class="form-newsletter">
+                    <input type="text" placeholder="type your mail here">
+                    <input type="submit" value="Subscribe">
+                </div>
+                <span>Join our newssletter for exciting opportunities</span>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-footer.png" alt="footer-logo">
+                </div>
+                <div class="footer-items">
+                    <div class="f-about">
+                        <h2>about us</h2>
+                        <p>Sed diam nonummy nibh euismod tut<br>laoreet dolore magna aliquam erat<br> volutpat. Ut wisi enim ad minim.</p>
+                    </div>
+                    <div class="f-categories">
+                        <h2>gategories</h2>
+                        <div class="f-categorie">
+                            <div>
+                                <a href="">section1</a>
+                                <a href="">section2</a>
+                                <a href="">section3</a>
+                                <a href="">section4</a>
+                                <a href="">section5</a>
+                            </div>
+                            <div>
+                                <a href="">section6</a>
+                                <a href="">section7</a>
+                                <a href="">section8</a>
+                                <a href="">section9</a>
+                                <a href="">section10</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-follow">
+                        <h2>follow us</h2>
+                        <div>
+                            <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i>facebook</a>
+                            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i>instagram</a>
+                            <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i>twitter</a>
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        <h1>Subscribe</h1>
+                        <p>Join our newssletter for exciting opportunities</p>
+                        <div class="footer-form-newsletter">
+                            <input type="text" placeholder="type your mail here">
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p>Copyright 2022. all rights reserved</p>
+                <div class="footer-img-logos">
+                    <div class="footer-img-logo">
+                        <a href="#"><img src="images/f1.png" alt="footer-logo"></a>
+                    </div>
+                    <div class="footer-img-logo">
+                        <a href="#"><img src="images/f2.png" alt="footer-logo"></a>
+                    </div>
+                    <div class="footer-img-logo">
+                        <a href="#"><img src="images/f3.png" alt="footer-logo"></a>
+                    </div>
+                    <div class="footer-img-logo">
+                        <a href="#"><img src="images/f4.png" alt="footer-logo"></a>
+                    </div>
+                    <div class="footer-img-logo">
+                        <a href="#"><img src="images/f5.png" alt="footer-logo"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js "></script>
+    <script>
+        $(document).ready(function() {
+            $('.logo-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                autoplayspeed: 2000,
+                infiniite: true,
+                responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.logo-slider3').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplayspeed: 2000,
+                infiniite: true,
+                responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+
+</body>
+<script src="./js/main.js "></script>
+
+</html>
